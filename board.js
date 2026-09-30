@@ -2,7 +2,7 @@
 const B = window.BOARD;
 if (!B || !document.getElementById("bd")) return;
 const TODAY = B.today, TASKS = B.tasks;
-document.getElementById("bd").insertAdjacentHTML("beforebegin", "<style>" + "#bd{padding:.5rem 0;font-size:14px}.st{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:12px;margin-bottom:12px}.st div{background:var(--surface-1);border-radius:var(--radius);padding:.75rem 1rem;min-width:0}.st small{display:block;font-size:13px;color:var(--text-secondary)}.st b{font-size:24px;font-weight:500}.st em{display:block;font-size:12px;font-style:normal;color:var(--text-muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.fl{display:flex;gap:8px;margin-bottom:12px;flex-wrap:wrap}.fl button{font-size:13px;padding:4px 12px;height:auto}.fl button[aria-pressed=true]{background:var(--bg-accent);color:var(--text-accent);border-color:var(--border-accent)}.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;align-items:start}.col{background:var(--surface-1);border-radius:12px;padding:10px;display:flex;flex-direction:column;gap:8px;min-height:120px}.col.over{outline:1.5px dashed var(--border-accent);outline-offset:-2px}.ch{display:flex;align-items:center;gap:6px;font-size:13px;font-weight:500;color:var(--text-secondary);padding:2px 4px 0}.ch span{margin-left:auto;font-weight:400;color:var(--text-muted)}.cd{background:var(--surface-2);border:0.5px solid var(--border);border-radius:var(--radius);padding:10px 12px;cursor:grab}.cd:hover{border-color:var(--border-strong)}.cd.op{border-color:var(--border-accent);cursor:default}.cd.mv{border-style:dashed;border-color:var(--border-accent)}.tp{display:flex;gap:8px;align-items:baseline}.nn{font-size:12px;color:var(--text-muted);min-width:18px}.tt{line-height:1.4;color:var(--text-primary)}.mt{display:flex;flex-wrap:wrap;gap:4px 8px;align-items:center;margin-top:8px;font-size:12px;color:var(--text-secondary)}.pl{font-size:11px;padding:1px 8px;border-radius:var(--radius);display:inline-flex;gap:3px;align-items:center}.p-high{background:var(--bg-danger);color:var(--text-danger)}.p-medium{background:var(--bg-warning);color:var(--text-warning)}.p-low{background:var(--surface-1);color:var(--text-secondary)}.nw{background:var(--bg-success);color:var(--text-success)}.old{color:var(--text-warning)}.late{color:var(--text-danger)}.bar{height:4px;background:var(--surface-1);border-radius:2px;margin-top:8px;overflow:hidden}.bar div{height:100%;background:var(--text-success)}.nt{margin-top:6px;font-size:12px;color:var(--text-secondary);display:flex;gap:4px;align-items:baseline}.dt{margin-top:10px;padding-top:10px;border-top:0.5px solid var(--border);font-size:13px;line-height:1.5;cursor:auto}.dt p{margin:0 0 8px}.lb{font-size:12px;color:var(--text-muted)}.ac{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:8px}.ac button{font-size:12px;padding:3px 10px;height:auto}.pd{margin-top:12px;background:var(--surface-1);border-radius:12px;padding:10px 12px;display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:13px}.pd .sp{flex:1}.pd input{flex:1 1 220px;min-width:0;font-size:12px}" + "</style>");
+document.getElementById("bd").insertAdjacentHTML("beforebegin", "<style>" + "#bd{padding:.5rem 0;font-size:14px}.st{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:12px;margin-bottom:12px}.st div{background:var(--surface-1);border-radius:var(--radius);padding:.75rem 1rem;min-width:0}.st small{display:block;font-size:13px;color:var(--text-secondary)}.st b{font-size:24px;font-weight:500}.st em{display:block;font-size:12px;font-style:normal;color:var(--text-muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.fl{display:flex;gap:8px;margin-bottom:12px;flex-wrap:wrap}.fl button{font-size:13px;padding:4px 12px;height:auto}.fl button[aria-pressed=true]{background:var(--bg-accent);color:var(--text-accent);border-color:var(--border-accent)}.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;align-items:start}.col{background:var(--surface-1);border-radius:12px;padding:10px;display:flex;flex-direction:column;gap:8px;min-height:120px}.col.over{outline:1.5px dashed var(--border-accent);outline-offset:-2px}.ch{display:flex;align-items:center;gap:6px;font-size:13px;font-weight:500;color:var(--text-secondary);padding:2px 4px 0}.ch span{margin-left:auto;font-weight:400;color:var(--text-muted)}.cd{background:var(--surface-2);border:0.5px solid var(--border);border-radius:var(--radius);padding:10px 12px;cursor:grab}.cd:hover{border-color:var(--border-strong)}.cd.op{border-color:var(--border-accent);cursor:default}.cd.mv{border-style:dashed;border-color:var(--border-accent)}.tp{display:flex;gap:8px;align-items:baseline}.nn{font-size:12px;color:var(--text-muted);min-width:18px}.tt{line-height:1.4;color:var(--text-primary)}.mt{display:flex;flex-wrap:wrap;gap:4px 8px;align-items:center;margin-top:8px;font-size:12px;color:var(--text-secondary)}.pl{font-size:11px;padding:1px 8px;border-radius:var(--radius);display:inline-flex;gap:3px;align-items:center}.p-high{background:var(--bg-danger);color:var(--text-danger)}.p-medium{background:var(--bg-warning);color:var(--text-warning)}.p-low{background:var(--surface-1);color:var(--text-secondary)}.nw{background:var(--bg-success);color:var(--text-success)}.old{color:var(--text-warning)}.late{color:var(--text-danger)}.bar{height:4px;background:var(--surface-1);border-radius:2px;margin-top:8px;overflow:hidden}.bar div{height:100%;background:var(--text-success)}.nt{margin-top:6px;font-size:12px;color:var(--text-secondary);display:flex;gap:4px;align-items:baseline}.dt{margin-top:10px;padding-top:10px;border-top:0.5px solid var(--border);font-size:13px;line-height:1.5;cursor:auto}.dt p{margin:0 0 8px}.lb{font-size:12px;color:var(--text-muted)}.ac{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:8px}.ac button{font-size:12px;padding:3px 10px;height:auto}.pd{margin-top:12px;background:var(--surface-1);border-radius:12px;padding:10px 12px;display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:13px}.pd .sp{flex:1}.pd input{flex:1 1 220px;min-width:0;font-size:12px}.ar{display:flex;margin-bottom:12px}.ar button{font-size:13px;padding:4px 14px;height:auto;border-radius:0}.ar button:first-child{border-radius:var(--radius) 0 0 var(--radius)}.ar button:last-child{border-radius:0 var(--radius) var(--radius) 0;margin-left:-0.5px}.ar button[aria-pressed=true]{background:var(--bg-accent);color:var(--text-accent);border-color:var(--border-accent)}" + "</style>");
 const COLS = [["todo","To do","ti-circle-dashed"],["progress","In progress","ti-progress"],["blocked","Blocked","ti-lock"]];
 const STATUS = {todo:"to do", progress:"in-progress", blocked:"blocked"};
 const PI = {high:"ti-flame", medium:"ti-arrow-up-right", low:"ti-arrow-down-right"};
@@ -13,7 +13,9 @@ const hm = m => !m ? "" : m < 60 ? m + "m" : Math.floor(m / 60) + "h" + (m % 60 
 const late = t => t.planned && ago(t.planned) > 0;
 const FILTERS = [["all","All",() => true],["high","High priority",t => t.priority === "high"],["late","Past planned date",late],["new","New today",t => ago(t.created) === 0]];
 TASKS.forEach(t => t.home = t.col);
-let open = null, filter = "all", sent = "", copied = false;
+const AREAS = [["work","Work"],["personal","Personal"]];
+let open = null, filter = "all", area = "work", sent = "", copied = false;
+const inArea = t => (t.area || "work") === area;
 const bd = document.getElementById("bd");
 
 function card(t) {
@@ -42,16 +44,18 @@ function card(t) {
 
 function render() {
   const f = FILTERS.find(x => x[0] === filter)[2];
-  const oldest = TASKS.reduce((a, t) => !a || ago(t.created) > ago(a.created) ? t : a, null);
+  const A = TASKS.filter(inArea);
+  const oldest = A.reduce((a, t) => !a || ago(t.created) > ago(a.created) ? t : a, null);
   const moves = TASKS.filter(t => t.col !== t.home);
   bd.innerHTML =
-    `<div class="st"><div><small>Open</small><b>${TASKS.length}</b></div>` +
-    `<div><small>High priority</small><b>${TASKS.filter(t => t.priority === "high").length}</b></div>` +
-    `<div><small>Past planned date</small><b>${TASKS.filter(late).length}</b></div>` +
+    `<div class="ar" role="group" aria-label="Area">${AREAS.map(([k, l]) => `<button data-act="area" data-a="${k}" aria-pressed="${area === k}">${l} ${TASKS.filter(t => (t.area || "work") === k).length}</button>`).join("")}</div>` +
+    `<div class="st"><div><small>Open</small><b>${A.length}</b></div>` +
+    `<div><small>High priority</small><b>${A.filter(t => t.priority === "high").length}</b></div>` +
+    `<div><small>Past planned date</small><b>${A.filter(late).length}</b></div>` +
     `<div><small>Oldest open</small><b>${oldest ? ago(oldest.created) + "d" : "-"}</b><em>${oldest ? esc(oldest.title) : ""}</em></div></div>` +
     `<div class="fl">${FILTERS.map(x => `<button data-act="filter" data-f="${x[0]}" aria-pressed="${filter === x[0]}">${x[1]}</button>`).join("")}</div>` +
     `<div class="cols">${COLS.map(([k, l, ic]) => {
-      const it = TASKS.filter(t => t.col === k), vis = it.filter(f);
+      const it = A.filter(t => t.col === k), vis = it.filter(f);
       return `<div class="col" data-col="${k}"><div class="ch"><i class="ti ${ic}" style="font-size:16px" aria-hidden="true"></i>${l}<span>${it.length}${it.length ? " · " + hm(it.reduce((a, t) => a + mins(t.est), 0)) : ""}</span></div>` +
         (vis.map(card).join("") || `<div class="nt" style="padding:8px 4px">${it.length ? "Filtered out" : "Nothing here. Enjoy it."}</div>`) + `</div>`;
     }).join("")}</div>` +
@@ -78,6 +82,7 @@ bd.addEventListener("click", e => {
     if (k === "ask") return ask(a.dataset.p);
     if (k === "copy") { copy(); return render(); }
     if (k === "filter") filter = a.dataset.f;
+    if (k === "area") { area = a.dataset.a; open = null; filter = "all"; }
     if (k === "move") { TASKS.find(t => t.n == a.dataset.n).col = a.dataset.to; sent = ""; }
     if (k === "undo") TASKS.forEach(t => t.col = t.home);
     if (k === "apply") {
